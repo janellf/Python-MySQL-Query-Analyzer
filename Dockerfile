@@ -4,11 +4,11 @@ LABEL maintainer="Janell"
 
 WORKDIR /app
 
-COPY . .
-
-COPY COPY requirements.txt /app.py
+COPY requirements.txt /app/
 
 RUN pip install -r requirements.txt --no-cache-dir
+
+COPY . .
 
 EXPOSE 5000
 
